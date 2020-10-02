@@ -18,8 +18,8 @@ main()
 		J = a - b;
 		printf("\n G - %.2f", J);
 		printf("\n K = (a * a) / (b * b)");
-		J = (a * a) / (b * b);
-		printf("\n G - %.2f", J);
+		K = (a * a) / (b * b);
+		printf("\n G - %.2f", K);
 	}
 	else
 	{
@@ -27,8 +27,8 @@ main()
 		J = b - a;
 		printf("\n G - %.2f", J);
 		printf("\n K = (b * b) / (a * a)");
-		J = (b * b) / (a * a);
-		printf("\n G - %.2f", J);
+		K = (b * b) / (a * a);
+		printf("\n G - %.2f", K);
 	}
 
 }

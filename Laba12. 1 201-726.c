@@ -5,12 +5,14 @@ main()
 {
 	setlocale(LC_ALL, "Rus");
 	int x, y, z, g;
+	int k, c;
 	printf("X (день) - ");
 	scanf_s("%i", &x);
 	printf("y (месяц) - ");
 	scanf_s("%i", &y);
 	g = x / 10; //десяток
 	z = x % 10; //еденицы
+	k = 0;
 	while ((x > 10) && (x < 20))
 	{
 		switch (x)
@@ -43,50 +45,53 @@ main()
 			printf("Девятнадцатое ");
 			break;
 		}
+		k = 1;
+		break;
+	}
+	if (k != 1)
+	{
+		switch (g)
+		{
+		case(1):
+			printf("Десятое ");
+			break;
+		case(2):
+			printf("Двадцать ");
+			break;
+		case(3):
+			printf("Тридцать ");
+			break;
+		}
 
-		break;
-	}
-		
-	switch (g)
-	{
-	case(1):
-		printf("Десятое ");
-		break;
-	case(2):
-		printf("Двадцать ");
-		break;
-	case(3):
-		printf("Тридцать ");
-		break;
-	}
-	switch (z)
-	{
-	case(1):
-		printf("Первое ");
-		break;
-	case(2):
-		printf("Второе ");
-		break;
-	case(3):
-		printf("Третье ");
-		break;
-	case(4):
-		printf("Четвертое ");
-		break;
-	case(5):
-		printf("Пятое ");
-		break;
-	case(6):
-		printf("Шестое ");
-		break;
-	case(7):
-		printf("Седьмое ");
-		break;
-	case(8):
-		printf("Восьмое ");
-		break;
-	case(9):
-		printf("Девятое ");
+		switch (z)
+		{
+		case(1):
+			printf("Первое ");
+			break;
+		case(2):
+			printf("Второе ");
+			break;
+		case(3):
+			printf("Третье ");
+			break;
+		case(4):
+			printf("Четвертое ");
+			break;
+		case(5):
+			printf("Пятое ");
+			break;
+		case(6):
+			printf("Шестое ");
+			break;
+		case(7):
+			printf("Седьмое ");
+			break;
+		case(8):
+			printf("Восьмое ");
+			break;
+		case(9):
+			printf("Девятое ");
+		}
 	}
 
 	switch (y)

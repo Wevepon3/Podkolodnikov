@@ -1,20 +1,15 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <math.h>
+#include <locale.h>
 main()
 {
-	float A, B, C, x, y, z, c;
-	printf("A - ");
-	scanf_s("%f", &A);
-	printf("\n B - ");
-	scanf_s("%f", &B);
-	printf("\n C - ");
-	scanf_s("%f", &C);
-	x = A * B;
-	y = C * C;
-	z = x / y;
-	z = floor(z);
-	c = x - z * y;
-	printf("\n z - %.2f \n c - %.2f", z, c);
-
+	setlocale(LC_ALL, "Rus");
+	int K, N, D;
+	printf("Введите день этого года - ");
+	scanf_s("%d", &K);
+	printf("Введите каким номером было 1 января - ");
+	scanf_s("%d", &N);
+	D = ((K + N - 2) % 7) + 1;
+	printf("День недели - %d", D);
 }
 

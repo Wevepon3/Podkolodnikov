@@ -1,18 +1,16 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <math.h>
+#include <locale.h>
 main()
 {
-	int x, k;
-	printf("k - ");
-	scanf_s("%i", &x);
-	k = 0;
-	while (x > 6)
-	{
-		x = x - 7;
-		k = k + 1;
-
-	}
-	printf("\n %i x - ", x);
-	printf("\n %i k - ", k);
+	setlocale(LC_ALL, "Rus");
+	int K, N, D;
+	printf("Введите день этого года - ");
+	scanf_s("%d", &K);
+	printf("Введите каким номером было 1 января - ");
+	scanf_s("%d", &N);
+	D = ((K + N - 2) % 7) + 1;
+	printf("День недели - %d", D);
 }
+
 

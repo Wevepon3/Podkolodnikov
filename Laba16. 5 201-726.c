@@ -1,3 +1,5 @@
+#include <locale.h>
+#include <stdio.h>
 #include <math.h>
 
 int main()
@@ -16,8 +18,9 @@ int main()
     {
         printf("%d\n", s[i]);
     }
-    for (i = 2; i <= N; i += 2)
+    for (i = N; i > 0; i--)
     {
+        if (i % 2 == 0)
         printf("%d\n", s[i]);
     }
 }
